@@ -1,11 +1,12 @@
 {
-  "name": "ostai-env",
+  "name": "@ostai/env",
   "version": "1.0.0",
-  "description": "ostai-env",
+  "description": "manage and get process.env",
   "main": "src/index.js",
   "scripts": {
     "test": "npm run test-no-report",
-    "test-no-report": "nyc ava --timeout=10s",
+    "test-no-report": "bash test.sh",
+    "test:node": "nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
     "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },

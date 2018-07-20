@@ -15,19 +15,28 @@
 
 # ostai-env
 
-<!-- description -->
+Manage and get `process.env`
 
 ## Install
 
 ```sh
-$ npm install ostai-env
+$ npm i @ostai/env
 ```
 
 ## Usage
 
-```js
-import ostai_env from 'ostai-env'
+```ts
+env(key: string, converter?: Function | null, defaults?: any): any
 ```
+
+- **key** `string` environment key
+- **converter** `?Function(value: any): any` the method to convert env value
+- **defaults** `any` the default value if environment key is not found
+
+## Converter functions
+
+- `env.boolean` which treats `'true'` and `'1'` as `true`
+- `env.integer`
 
 ## License
 
