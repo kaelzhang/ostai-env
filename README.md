@@ -33,6 +33,10 @@ env(key: string, converter?: Function | null, defaults?: any): any
 - **converter** `?Function(value: any): any` the method to convert env value
 - **defaults** `any` the default value if environment key is not found
 
+```js
+const port = env('SERVER_PORT', env.integer, 80)
+```
+
 ## Converter functions
 
 - `env.boolean` which treats `'true'` and `'1'` as `true`

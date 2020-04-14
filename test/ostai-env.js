@@ -1,4 +1,4 @@
-const {test} = require('ava')
+const test = require('ava')
 const env = require('../src')
 
 const CASES = [
