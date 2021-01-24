@@ -26,21 +26,30 @@ $ npm i @ostai/env
 ## Usage
 
 ```ts
-env(key: string, converter?: Function | null, defaults?: any): any
+type Converter = (
+  value: any,
+  // The key of the env variable
+  key: string,
+  // If the env key does not exist, then `is_default` is true
+  is_default: boolean
+) => any
+
+env(key: string, converter?: Converter | Array<Converter> | null, defaults?: any): any
 ```
 
 - **key** `string` environment key
-- **converter** `?Function(value: any): any` the method to convert env value
-- **defaults** `any` the default value if environment key is not found
+- **converter?** `Converter | Array<Converter> | null` the method to convert env value
+- **defaults?** `any` the default value if environment key is not found
 
 ```js
 const port = env('SERVER_PORT', env.integer, 80)
 ```
 
-## Converter functions
+### Converter functions
 
 - `env.boolean` which treats `'true'` and `'1'` as `true`
 - `env.integer`
+- `env.`
 
 ## License
 
