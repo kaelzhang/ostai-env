@@ -47,9 +47,9 @@ const port = env('SERVER_PORT', env.integer, 80)
 
 ### Converter functions
 
-- `env.boolean` which treats `'true'` and `'1'` as `true`
-- `env.integer`
-- `env.`
+- `env.boolean` which treats `'true'` / `'1'` / `Y` / etc as `true`
+- `env.integer` converts the given value to an integer.
+- `env.required` if the env variable is not found, an `RangeError` will throw
 
 ## License
 
