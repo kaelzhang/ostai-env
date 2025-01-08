@@ -17,8 +17,9 @@ env.boolean = v => v === 'true'
   || v === '1'
   || v === 'Y'
   || v === 'y'
-  || v === 'yes'
+  // true as a default value
   || v === true
+  || /yes|true/i.test(v)
 
 env.integer = v => parseInt(v, 10) || 0
 

@@ -1,5 +1,9 @@
-[![Build Status](https://travis-ci.org/kaelzhang/ostai-env.svg?branch=master)](https://travis-ci.org/kaelzhang/ostai-env)
+[![build][bb]][bl]
 [![Coverage](https://codecov.io/gh/kaelzhang/ostai-env/branch/master/graph/badge.svg)](https://codecov.io/gh/kaelzhang/ostai-env)
+
+[bb]: https://github.com/kaelzhang/ostai-env/actions/workflows/nodejs.yml/badge.svg
+[bl]: https://github.com/kaelzhang/ostai-env/actions/workflows/nodejs.yml
+
 <!-- optional appveyor tst
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/kaelzhang/ostai-env?branch=master&svg=true)](https://ci.appveyor.com/project/kaelzhang/ostai-env)
 -->

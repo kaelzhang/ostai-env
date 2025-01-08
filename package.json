@@ -1,6 +1,6 @@
 {
   "name": "@ostai/env",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "manage and get process.env",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test-no-report": "bash test.sh",
     "test:node": "nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
-    "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
   "files": [
     "src/"
@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "ava": ">=3.15.0",
-    "codecov": "^3.8.1",
     "nyc": "^15.1.0",
     "eslint-config-ostai": "^3.0.0",
     "eslint-plugin-import": "^2.22.1",
